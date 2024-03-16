@@ -1,0 +1,101 @@
+.pricing-card {
+  --buttonColor: #03cc88;
+  --buttonHoverColor:#000;
+  --buttonBorderColor:#03cc88;
+  --buttonBorderHoverColor:#000;
+
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  border-radius: 10px;
+  border: 2px solid #e2e2e2;
+  padding:32px;
+  font-size: 18px;
+  font-family: Poppins, sans-serif;
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  &__title {
+    
+    font-size: 26px;
+    line-height: 1.307;
+    font-weight: 700;
+    margin-bottom: 20px;
+    +p{
+      margin-bottom: 35px;
+    }
+  }
+  &__pricing-block{
+    background-color: #f0f0f0;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    border-radius: 10px;
+    
+    margin-bottom: 40px;
+  }
+  &__price{
+    display: block;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 700;
+    span{
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+  &__bottom-text{
+
+  }
+  &__list{
+    position: relative;
+    list-style: none;
+    flex-direction: column;
+    display: flex;
+    row-gap: 16px;
+    margin-bottom: 30px;
+    li{
+      display: flex;
+      column-gap: 8px;
+      &::before{
+        content: "✓";
+        color: inherit;
+      }
+    }
+}
+  
+&__button {
+  font-family: Poppins, sans-serif;
+  position: relative;
+  z-index: 1;
+  display: block;
+  line-height: 56px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  background: var(--sPricingPrimary);
+  width: 100%;
+  border-color:var(--sPricingPrimary) ;
+  &:hover{
+    background-color: var(--sPricingSecondary);
+    border-color:var(--sPricingSecondary);
+  }
+}
+
+    &.active{
+      background-color: var(--sPricingPrimary);
+      .pricing-card__button{
+        
+      }
+    }
+}
+
+
+
